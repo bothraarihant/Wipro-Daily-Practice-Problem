@@ -1,10 +1,10 @@
 
 public class Day004_Q2 {
 	public static void main(String[] args) {
-		CashPayment c1 = new CashPayment(15000);
-		CashPayment c2 = new CashPayment(20000);
-		CreditCardPayment cc1 = new CreditCardPayment(25000, "Rajesh", "25/03/2022", "12345678");
-		CreditCardPayment cc2 = new CreditCardPayment(30000, "Jarvis", "09/05/2022", "87654321");
+		CashPayment_D4Q2 c1 = new CashPayment_D4Q2(15000);
+		CashPayment_D4Q2 c2 = new CashPayment_D4Q2(20000);
+		CreditCardPayment_D4Q2 cc1 = new CreditCardPayment_D4Q2(25000, "Rajesh", "25/03/2022", "12345678");
+		CreditCardPayment_D4Q2 cc2 = new CreditCardPayment_D4Q2(30000, "Jarvis", "09/05/2022", "87654321");
 		System.out.println("Cash 1 details:");
 		c1.PaymentDetails();
 		System.out.println("Cash 2 details:");
@@ -17,14 +17,14 @@ public class Day004_Q2 {
 
 }
 
-class Payment {
+class Payment_D4Q2 {
 	double amount;
 
-	Payment() {
+	Payment_D4Q2() {
 		amount = 0.0;
 	}
 
-	Payment(double amount) {
+	Payment_D4Q2(double amount) {
 		this.amount = amount;
 	}
 
@@ -41,8 +41,8 @@ class Payment {
 	}
 }
 
-class CashPayment extends Payment {
-	public CashPayment(double amount) {
+class CashPayment_D4Q2 extends Payment_D4Q2 {
+	public CashPayment_D4Q2(double amount) {
 		super(amount);
 	}
 
@@ -51,12 +51,12 @@ class CashPayment extends Payment {
 	}
 }
 
-class CreditCardPayment extends Payment {
+class CreditCardPayment_D4Q2 extends Payment_D4Q2 {
 	String name;
 	String date;
 	String cardnumber;
 
-	public CreditCardPayment(double amount, String name, String date, String cardnumber) {
+	public CreditCardPayment_D4Q2(double amount, String name, String date, String cardnumber) {
 		super(amount);
 		this.name = name;
 		this.date = date;
