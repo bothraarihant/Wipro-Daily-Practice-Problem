@@ -18,8 +18,8 @@ class MyArrayList<E> extends ArrayList<E> {
             return true;
         } else {
             throw new ClassCastException("Only numbers are allowed");
-            // return false; // if we return false, it will just through without throwing an
-            // exception
+            // return false; // if we return false, it will just skip through without
+            // throwing an exception
         }
     }
 }
