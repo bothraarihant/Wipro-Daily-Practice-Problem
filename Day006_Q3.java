@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Day006_Q3 {
     public static void main(String[] args) {
-        List<Object> list = new MyArrayList<>();
+        List<Object> list = new MyArrayList_D6Q3<>();
         list.add(1);
         list.add("0");
         list.add(3.14);
@@ -11,7 +11,7 @@ public class Day006_Q3 {
     }
 }
 
-class MyArrayList<E> extends ArrayList<E> {
+class MyArrayList_D6Q3<E> extends ArrayList<E> {
     public boolean add(E e) {
         if (e instanceof Integer || e instanceof Float || e instanceof Double) {
             super.add(e);
