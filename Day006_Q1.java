@@ -3,30 +3,30 @@ import java.util.*;
 public class Day006_Q1 {
     public static void main(String[] args) {
         EmployeeDB empDb = new EmployeeDB();
-		
-		Employee emp1 = new Employee(101, "Rajesh", "bob@demo.com", 'M', 25000);
-		Employee emp2 = new Employee(102, "Ethan", "alice@demo.com", 'M', 30000);
-		Employee emp3 = new Employee(103, "John", "john@demo.com", 'M', 20000);
-		Employee emp4 = new Employee(104, "Ram", "ram@demo.com", 'M', 50000);
-		
-		empDb.addEmployee(emp1);
-		empDb.addEmployee(emp2);
-		empDb.addEmployee(emp3);
-		empDb.addEmployee(emp4);
 
-		for (Employee emp : empDb.listAll())
-			System.out.println(emp.GetEmployeeDetails());
-		
-		System.out.println();
-		empDb.deleteEmployee(102);
-		
-		for (Employee emp : empDb.listAll())
-			System.out.println(emp.GetEmployeeDetails());
-		
-		System.out.println();
-		
-		System.out.println(empDb.showPaySlip(103));
-	
+        Employee emp1 = new Employee(101, "Rajesh", "bob@demo.com", 'M', 25000);
+        Employee emp2 = new Employee(102, "Ethan", "alice@demo.com", 'M', 30000);
+        Employee emp3 = new Employee(103, "John", "john@demo.com", 'M', 20000);
+        Employee emp4 = new Employee(104, "Ram", "ram@demo.com", 'M', 50000);
+
+        empDb.addEmployee(emp1);
+        empDb.addEmployee(emp2);
+        empDb.addEmployee(emp3);
+        empDb.addEmployee(emp4);
+
+        for (Employee emp : empDb.listAll())
+            System.out.println(emp.GetEmployeeDetails());
+
+        System.out.println();
+        empDb.deleteEmployee(102);
+
+        for (Employee emp : empDb.listAll())
+            System.out.println(emp.GetEmployeeDetails());
+
+        System.out.println();
+
+        System.out.println(empDb.showPaySlip(103));
+
     }
 }
 
@@ -50,7 +50,8 @@ class Employee {
     }
 
     public String GetEmployeeDetails() {
-        return "EmpId=" + EmpId + ", EmpName=" + EmpName + ", EmpEmail=" + EmpEmail + ", EmpGender=" + EmpGender + ", EmpSalary=" + EmpSalary;
+        return "EmpId=" + EmpId + ", EmpName=" + EmpName + ", EmpEmail=" + EmpEmail + ", EmpGender=" + EmpGender
+                + ", EmpSalary=" + EmpSalary;
     }
 
     public int getEmpId() {
